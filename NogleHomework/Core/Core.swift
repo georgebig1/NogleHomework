@@ -21,9 +21,9 @@ class Core: NSObject {
     private(set) var apiHelper: ApiProtocol
     let disposeBag = DisposeBag()
     
-    private(set) var allMarketList = [Record]()
-    private(set) var spotList = BehaviorRelay<[Record]>(value: [])
-    private(set) var futuresList = BehaviorRelay<[Record]>(value: [])
+    private(set) var allMarketList = [MarketRecord]()
+    private(set) var spotList = BehaviorRelay<[MarketRecord]>(value: [])
+    private(set) var futuresList = BehaviorRelay<[MarketRecord]>(value: [])
     private(set) var updateedMarketData = BehaviorRelay<JsonObject>(value: JsonObject())
     
     let socket: SocketClient = SocketClient()
@@ -37,8 +37,8 @@ class Core: NSObject {
             guard let self = self else { return }
             
             self.allMarketList = response.data
-            var spot = [Record]()
-            var futures = [Record]()
+            var spot = [MarketRecord]()
+            var futures = [MarketRecord]()
             
             self.allMarketList.forEach { record in
                 if record.future {
@@ -54,11 +54,11 @@ class Core: NSObject {
         }).asCompletable()
     }
     
-    func updateMarket(List: [Record]) {
+    func updateMarket(List: [MarketRecord]) {
         self.allMarketList = List
     }
     
-    func sortList(_ list: [Record], type: SortType) -> [Record] {
+    func sortList(_ list: [MarketRecord], type: SortType) -> [MarketRecord] {
         switch type {
         case .nameAscending:
             return list.sorted(by: { $0.symbol < $1.symbol })

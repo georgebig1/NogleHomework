@@ -63,7 +63,7 @@ class ApiClient: NSObject {
 }
 
 extension ApiClient: ApiProtocol {
-    func getMarketData() -> Single<Response<Record>> {
+    func getMarketData() -> Single<Response<MarketRecord>> {
         let path = ApiDefinition.GET_MARKET_DATA
         return request(path, method: .get)
     }

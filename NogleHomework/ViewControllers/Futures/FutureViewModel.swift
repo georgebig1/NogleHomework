@@ -13,7 +13,7 @@ class FutureViewModel {
     private let disposeBag = DisposeBag()
     private var sortType: SortType = .nameAscending
     
-    var futuresList: BehaviorRelay<[Record]> = BehaviorRelay(value: [])
+    var futuresList: BehaviorRelay<[MarketRecord]> = BehaviorRelay(value: [])
     
     init(mCore: Core = Core.shared) {
         core = mCore

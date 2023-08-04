@@ -11,7 +11,7 @@ import RxSwift
 
 class MarketListCell: UITableViewCell {
     private let disposeBag = DisposeBag()
-    private var item: Record!
+    private var item: MarketRecord!
     private var vm: MarketListCellViewModel!
     
     lazy var lblName: UILabel = {
@@ -39,7 +39,7 @@ class MarketListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func config(item: Record) {
+    func config(item: MarketRecord) {
         self.item = item
         vm = MarketListCellViewModel(symbol: item.symbol)
         

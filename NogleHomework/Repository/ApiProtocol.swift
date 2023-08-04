@@ -10,5 +10,5 @@ import RxSwift
 import RxCocoa
 
 protocol ApiProtocol {
-    func getMarketData() -> Single<Response<Record>>
+    func getMarketData() -> Single<Response<MarketRecord>>
 }

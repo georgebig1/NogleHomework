@@ -13,7 +13,7 @@ class SpotViewModel {
     private let disposeBag = DisposeBag()
     private var sortType: SortType = .nameAscending
     
-    var spotList: BehaviorRelay<[Record]> = BehaviorRelay(value: [])
+    var spotList: BehaviorRelay<[MarketRecord]> = BehaviorRelay(value: [])
     
     init(mCore: Core = Core.shared) {
         core = mCore
@@ -34,8 +34,8 @@ class SpotViewModel {
     }
     
     func sortSpot() {
-        let futures = core.allMarketList.filter({ !$0.future })
-        let sorted = self.core.sortList(futures, type: sortType)
+        let spot = core.allMarketList.filter({ !$0.future })
+        let sorted = self.core.sortList(spot, type: sortType)
         self.spotList.accept(sorted)
     }
 }

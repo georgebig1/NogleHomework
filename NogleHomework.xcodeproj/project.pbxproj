@@ -27,7 +27,7 @@
 		65207B752A78AEB0003B3D87 /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B742A78AEB0003B3D87 /* SpotViewController.swift */; };
 		65207B772A78AEC8003B3D87 /* FuturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B762A78AEC8003B3D87 /* FuturesViewController.swift */; };
 		65207B7A2A794B21003B3D87 /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B792A794B21003B3D87 /* MarketData.swift */; };
-		65207B7C2A794B63003B3D87 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B7B2A794B63003B3D87 /* Record.swift */; };
+		65207B7C2A794B63003B3D87 /* MarketRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B7B2A794B63003B3D87 /* MarketRecord.swift */; };
 		65207B7F2A79EF55003B3D87 /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B7E2A79EF55003B3D87 /* JSONCodable.swift */; };
 		65207B812A79EFB7003B3D87 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B802A79EFB7003B3D87 /* NetworkProtocol.swift */; };
 		65207B832A79F0FE003B3D87 /* NetworkImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65207B822A79F0FE003B3D87 /* NetworkImp.swift */; };
@@ -72,7 +72,7 @@
 		65207B742A78AEB0003B3D87 /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		65207B762A78AEC8003B3D87 /* FuturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturesViewController.swift; sourceTree = "<group>"; };
 		65207B792A794B21003B3D87 /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
-		65207B7B2A794B63003B3D87 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		65207B7B2A794B63003B3D87 /* MarketRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRecord.swift; sourceTree = "<group>"; };
 		65207B7E2A79EF55003B3D87 /* JSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
 		65207B802A79EFB7003B3D87 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		65207B822A79F0FE003B3D87 /* NetworkImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImp.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				65207B792A794B21003B3D87 /* MarketData.swift */,
-				65207B7B2A794B63003B3D87 /* Record.swift */,
+				65207B7B2A794B63003B3D87 /* MarketRecord.swift */,
 				65207BB62A7ABDA4003B3D87 /* SocketCommand.swift */,
 			);
 			path = Models;
@@ -382,7 +382,7 @@
 				650F2A492A78A0AA00744532 /* ViewController.swift in Sources */,
 				65207B882A79FA6D003B3D87 /* ApiDefinition.swift in Sources */,
 				65207B752A78AEB0003B3D87 /* SpotViewController.swift in Sources */,
-				65207B7C2A794B63003B3D87 /* Record.swift in Sources */,
+				65207B7C2A794B63003B3D87 /* MarketRecord.swift in Sources */,
 				65207B8D2A7A0912003B3D87 /* Core.swift in Sources */,
 				65207B8A2A79FACD003B3D87 /* ApiProtocol.swift in Sources */,
 				65207BB72A7ABDA4003B3D87 /* SocketCommand.swift in Sources */,
