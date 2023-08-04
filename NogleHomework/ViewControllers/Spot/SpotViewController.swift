@@ -2,7 +2,7 @@
 //  SpotViewController.swift
 //  NogleHomework
 //
-//  Created by Tseng Han Teng on 2023/8/1.
+//  Created by George Tseng on 2023/8/1.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  Core.Socket.swift
 //  NogleHomework
 //
-//  Created by Tseng Han Teng on 2023/8/3.
+//  Created by George Tseng on 2023/8/3.
 //
 
 import RxCocoa

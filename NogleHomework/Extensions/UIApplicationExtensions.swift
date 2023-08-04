@@ -2,13 +2,13 @@
 //  UIApplicationExtensions.swift
 //  NogleHomework
 //
-//  Created by Tseng Han Teng on 2023/8/2.
+//  Created by George Tseng on 2023/8/2.
 //
 
 import UIKit
 
 extension UIApplication {
-    class func topViewController(base: UIViewController? = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController) -> UIViewController? {
+    class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)
@@ -25,5 +25,18 @@ extension UIApplication {
             return topViewController(base: presented)
         }
         return base
+    }
+    
+    var keyWindow: UIWindow? {
+        // Get connected scenes
+        return self.connectedScenes
+        // Keep only active scenes, onscreen and visible to the user
+            .filter { $0.activationState == .foregroundActive }
+        // Keep only the first `UIWindowScene`
+            .first(where: { $0 is UIWindowScene })
+        // Get its associated windows
+            .flatMap({ $0 as? UIWindowScene })?.windows
+        // Finally, keep only the key window
+            .first(where: \.isKeyWindow)
     }
 }

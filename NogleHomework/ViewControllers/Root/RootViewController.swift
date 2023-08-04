@@ -2,7 +2,7 @@
 //  RootViewController.swift
 //  NogleHomework
 //
-//  Created by Tseng Han Teng on 2023/8/1.
+//  Created by George Tseng on 2023/8/1.
 //
 
 import UIKit
@@ -24,7 +24,10 @@ class RootViewController: UIViewController {
     lazy var statusBarHeight: CGFloat = {
         var statusBarHeight: CGFloat = 0.0
         
-        if #available(iOS 13.0, *) {
+        if #available(iOS 15.0, *) {
+            let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+            statusBarHeight = windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        } else if #available(iOS 13.0, *) {
             let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
             statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
         } else {
